@@ -19,6 +19,8 @@ import { SoapContainerComponent } from './components/soap-container/soap-contain
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -35,9 +37,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatCardModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    //,
+    AppRoutingModule,
   ],
-  declarations: [ AppComponent, SoapItemComponent, SoapContainerComponent ],
-  bootstrap: [ AppComponent ]
+  declarations: [AppComponent, SoapItemComponent, SoapContainerComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

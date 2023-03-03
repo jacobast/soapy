@@ -1,6 +1,7 @@
 <!--NAVBAR-->
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
   <span>{{title}}</span>
@@ -8,17 +9,18 @@
 
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="over">
-    <p>Menu</p>
+
+    <!-- <p>Menu</p>
     <ul>
       <li class="text" *ngFor="let item of items | async">
         {{item.name}}
       </li>
-    </ul>
+    </ul> -->
   </mat-drawer>
 
   <div class="example-sidenav-content">
 
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
 
   </div>
 
