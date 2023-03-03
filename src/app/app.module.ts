@@ -17,6 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { SoapContainerComponent } from './components/soap-container/soap-container.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+
 
 @NgModule({
   imports: [
@@ -28,6 +31,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     // Material Modules
     MatButtonModule,
     MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
     MatCardModule,
     MatIconModule,
     MatGridListModule
