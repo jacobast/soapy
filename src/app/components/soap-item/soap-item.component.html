@@ -24,6 +24,13 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button class="buy-btn" mat-flat-button color="accent">Buy</button>
+        <button 
+            class="buy-btn" 
+            mat-flat-button 
+            color="accent"
+            (click)="addToCart(soap)"
+            >
+                Buy
+        </button>
     </mat-card-actions>
 </mat-card>
