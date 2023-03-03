@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SoapItemComponent } from './components/soap-item/soap-item.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { SoapContainerComponent } from './components/soap-container/soap-container.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -23,9 +27,12 @@ import { SoapItemComponent } from './components/soap-item/soap-item.component';
     AngularFirestoreModule,
     // Material Modules
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule
   ],
-  declarations: [ AppComponent, SoapItemComponent ],
+  declarations: [ AppComponent, SoapItemComponent, SoapContainerComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

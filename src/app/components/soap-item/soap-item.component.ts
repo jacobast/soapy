@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Soap } from '../../Soap';
 
 @Component({
   selector: 'app-soap-item',
   templateUrl: './soap-item.component.html',
   styleUrls: ['./soap-item.component.css']
 })
-export class SoapItemComponent {
+export class SoapItemComponent implements OnInit {
+  @Input() soap!: Soap
+
+  constructor() {
+
+  }
+
+  // onLike() { console.log("Click!") }
+
+
+  onLike() {
+    this.soap.saved = !this.soap.saved;
+  }
+
+  ngOnInit(): void { }
 
 }
