@@ -1,0 +1,16 @@
+.buy-btn {
+    width: 100%;
+}
+
+.title-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.like-button{    
+    border: none;
+}
+
+img {
+    width:100%;
+}

@@ -23,6 +23,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { CustomSoapComponent } from './components/custom-soap/custom-soap.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -47,6 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatFormFieldModule,
     MatSelectModule,
     MatGridListModule,
+    MatButtonToggleModule,
     //,
     AppRoutingModule,
   ],
