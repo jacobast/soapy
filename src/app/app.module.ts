@@ -7,7 +7,12 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
+
+// Material Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SoapItemComponent } from './components/soap-item/soap-item.component';
 
 @NgModule({
   imports: [
@@ -16,9 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // Firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    
+    // Material Modules
+    MatButtonModule,
+    MatSidenavModule
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, SoapItemComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

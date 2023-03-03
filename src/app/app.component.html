@@ -1,5 +1,20 @@
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
-  </li>
-</ul>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <p>Menu</p>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.name}}
+      </li>
+    </ul>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+    <!-- <router-outlet></router-outlet> -->
+
+    <button mat-flat-button color="primary" (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>

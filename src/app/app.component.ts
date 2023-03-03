@@ -14,4 +14,6 @@ export class AppComponent {
   constructor(firestore: AngularFirestore) {
     this.items = firestore.collection('items').valueChanges();
   }
+
+  showFiller = false;
 }
