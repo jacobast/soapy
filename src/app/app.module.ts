@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SoapItemComponent } from './components/soap-item/soap-item.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 @NgModule({
   imports: [
@@ -23,7 +27,9 @@ import { SoapItemComponent } from './components/soap-item/soap-item.component';
     AngularFirestoreModule,
     // Material Modules
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   declarations: [ AppComponent, SoapItemComponent ],
   bootstrap: [ AppComponent ]
