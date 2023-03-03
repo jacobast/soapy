@@ -1,18 +1,25 @@
 <mat-card>
     <mat-card-content>
+        <img mat-card-image src="{{soap.imgurl}}"/>
         <mat-card-title>
             {{soap.name}}
 
             <!--Like button-->
             <mat-button-toggle 
-            mat-icon-button class="like-button" 
-            aria-label="Example icon-button with heart icon"
-            (click)="onLike()">
+            mat-icon-button class="like-button"
+            (click)="onLike()" 
+            >
                 <mat-icon>favorite</mat-icon>
             </mat-button-toggle>
         </mat-card-title>
 
-        <p>{{soap.shape}}</p>
+        <!--Scents-->
+        <p> 
+           <b>Scent:</b> 
+            <span *ngFor="let scent of soap.scent; let last = last">
+                {{scent}}{{last ? '' : ', '}}
+            </span>
+        </p>
 
     </mat-card-content>
 
@@ -20,6 +27,3 @@
         <button class="buy-btn" mat-flat-button color="accent">Buy</button>
     </mat-card-actions>
 </mat-card>
-
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of Dogge" /> -->
-        <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/5/5e/John_%22Soap%22_MacTavish_MW3.png" -->

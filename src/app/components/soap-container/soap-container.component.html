@@ -1,35 +1,3 @@
-<mat-grid-list cols="3" rowHeight="1:1">
-    <mat-grid-tile *ngFor="let soap of soaps | async">
-        <!-- <app-soap-item [soap]="soap"></app-soap-item> -->
-        <mat-card>
-            <mat-card-content>
-                <img mat-card-image src="{{soap.imgurl}}"/>
-                <mat-card-title>
-                    {{soap.name}}
-        
-                    <!--Like button-->
-                    <mat-button-toggle 
-                    mat-icon-button class="like-button" 
-                    >
-                        <mat-icon>favorite</mat-icon>
-                    </mat-button-toggle>
-                </mat-card-title>
-
-                <!--Scents-->
-                <p> 
-                   <b>Scent:</b> 
-                    <span *ngFor="let scent of soap.scent; let last = last">
-                        {{scent}}{{last ? '' : ', '}}
-                    </span>
-                </p>
-        
-            </mat-card-content>
-        
-            <mat-card-actions>
-                <button class="buy-btn" mat-flat-button color="accent">Buy</button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
-</mat-grid-list>
-
-<!--(click)="onLike()" har tagit bort metoden atm-->
+<div class="grid">
+    <app-soap-item *ngFor="let soap of soaps | async" [soap]="soap"></app-soap-item>
+</div>
