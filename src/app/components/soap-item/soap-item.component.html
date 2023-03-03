@@ -1,16 +1,25 @@
-<mat-card style="height: 100%;">
+<mat-card>
     <mat-card-content>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of Dogge" />
-        <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/5/5e/John_%22Soap%22_MacTavish_MW3.png" -->
-        <mat-card-title class="title-container">{{soap.name}}
-            <mat-button-toggle mat-icon-button class="like-button" aria-label="Example icon-button with heart icon"
-                (click)="onLike()">
+        <mat-card-title>
+            {{soap.name}}
+
+            <!--Like button-->
+            <mat-button-toggle 
+            mat-icon-button class="like-button" 
+            aria-label="Example icon-button with heart icon"
+            (click)="onLike()">
                 <mat-icon>favorite</mat-icon>
             </mat-button-toggle>
         </mat-card-title>
-        <p>{{soap.desc}}</p>
+
+        <p>{{soap.shape}}</p>
+
     </mat-card-content>
+
     <mat-card-actions>
         <button class="buy-btn" mat-flat-button color="accent">Buy</button>
     </mat-card-actions>
 </mat-card>
+
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of Dogge" /> -->
+        <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/5/5e/John_%22Soap%22_MacTavish_MW3.png" -->

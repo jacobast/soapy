@@ -1,16 +1,18 @@
-.buy-btn {
-    width: 100%;
-}
-
-.title-container{
+/* .title-container{
     display:flex;
     justify-content: space-between;
-}
+} */
 
 .like-button{    
     border: none;
 }
 
-img {
-    width:100%;
+.buy-btn {
+    width: 100%;
 }
+
+mat-card {
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+  }

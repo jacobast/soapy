@@ -13,9 +13,6 @@ export class SoapItemComponent implements OnInit {
 
   }
 
-  // onLike() { console.log("Click!") }
-
-
   onLike() {
     this.soap.saved = !this.soap.saved;
   }
