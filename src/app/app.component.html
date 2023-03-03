@@ -1,5 +1,5 @@
-<!--NAVBAR-->
-<mat-toolbar>
+<!-- NAVBAR -->
+<!-- <mat-toolbar>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
     (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
@@ -8,20 +8,46 @@
 </mat-toolbar>
 
 <mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="over">
-
-    <!-- <p>Menu</p>
+  <mat-drawer #drawer class="example-sidenav" mode="over"> -->
+<!-- 
+    <p>Menu</p>
     <ul>
       <li class="text" *ngFor="let item of items | async">
         {{item.name}}
       </li>
     </ul> -->
-  </mat-drawer>
+<!-- </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div class="example-sidenav-content"> -->
 
-    <router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
-  </div>
+<!-- </div>
 
-</mat-drawer-container>
+</mat-drawer-container> -->
+
+<mat-toolbar>
+  <!-- <button mat-button class="menu-button" (click)="sidenav.toggle()">
+      <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+  </button> -->
+
+  <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]={exact:true}>
+    <span class="txtNav">Soapy</span>
+  </a>
+
+  <span class=" example-spacer"></span>
+  <a routerLink="/CustomSoap" routerLinkActive="active-link">
+    <span class="txtNav"> Create your own soap</span>
+  </a>
+
+  <span class="example-spacer"></span>
+
+  <button routerLink="/ShoppingCart" mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  <button routerLink="/PopularSoaps" mat-icon-button class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>whatshot</mat-icon>
+  </button>
+</mat-toolbar>
