@@ -1,1 +1,8 @@
-<p>saved-soaps works!</p>
+<mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile *ngFor="let soap of likedSoaps">
+        <app-soap-item [soap]="soap" style="height: 100%;"></app-soap-item>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<h1>yooooo</h1>

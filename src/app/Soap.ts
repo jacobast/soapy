@@ -1,9 +1,9 @@
 export interface Soap {
-    id: number;
+    color: string;
+    imgurl: string;
     name: string;
-    desc: string;
-    shape: string;
-    scent: string;
-    size: string;
     saved: boolean;
+    scent: string;
+    shape: string;
+    size: string;
 }

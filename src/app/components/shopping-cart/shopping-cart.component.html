@@ -1,1 +1,19 @@
-<p>shopping-cart works!</p>
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let soap of cartItems">
+          <td>{{ soap.name }}</td>
+          <td>0 kr</td> <!-- FIXA -->
+          <td><button (click)="removeFromCart(soap)">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="clearCart()">Clear cart</button>
+  </div>
