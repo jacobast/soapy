@@ -12,9 +12,11 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title: string = 'Soapy';
 
-  items: Observable<any[]>;
+  soaps: Observable<any[]>;
+  formoptions: Observable<any[]>;
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
+    this.soaps = firestore.collection('soaps').valueChanges();
+    this.formoptions = firestore.collection('formoptions').valueChanges();
   }
 
   showFiller = false;
