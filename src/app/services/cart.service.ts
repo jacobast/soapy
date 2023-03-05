@@ -5,7 +5,15 @@ import { Soap } from '../Soap';
   providedIn: 'root'
 })
 export class CartService {
-  items: Soap[] = [];
+  items: Soap[] = [{
+    color: "yellow",
+    imgurl: "",
+    name: "Test soap",
+    saved: false,
+    scent: "Wet Dog",
+    shape: 'Dog',
+    size: 'Average'
+}];
 
   addToCart(soap: Soap) {
     this.items.push(soap);
@@ -13,6 +21,7 @@ export class CartService {
 
   removeFromCart(soap: Soap) {
     this.items = this.items.filter(item => item !== soap);
+    return this.items;
   }
 
   getItems() {

@@ -1,0 +1,30 @@
+.center {
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    padding: 30px;
+}
+
+mat-card {
+    width: inherit;
+    height: auto;
+    margin: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+table td:nth-child(3) { text-align: end; }
+
+mat-form-field {
+    width: 100%;
+}

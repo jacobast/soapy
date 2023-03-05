@@ -13,7 +13,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 30px auto;
     overflow: auto;
     min-height: 300px;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     /* color: accent; */
     padding: 30px;
     border-radius: 5px;

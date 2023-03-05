@@ -29,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 
@@ -61,6 +62,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatAutocompleteModule,
     MatCheckboxModule,
     MatChipsModule,
+    MatStepperModule,
     //,
     AppRoutingModule,
   ],
