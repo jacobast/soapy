@@ -6,4 +6,5 @@ export interface Soap {
     scent: string;
     shape: string;
     size: string;
+    price: number;
 }

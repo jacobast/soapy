@@ -13,6 +13,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class ShoppingCartComponent implements OnInit {
   cartItems: Soap[] = [];
   post: any = '';
+  totalPrice: number = 0;
 
   formGroup: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
@@ -24,14 +25,24 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit() {
     this.cartItems = this.cartService.getItems();
+    this.calcTotal();
+  }
+
+  calcTotal() {
+    this.totalPrice = 0;
+    for(let item of this.cartItems) {
+      this.totalPrice += item.price;
+    }
   }
 
   removeFromCart(item: Soap) {
     this.cartItems = this.cartService.removeFromCart(item);
+    this.calcTotal();
   }
 
   clearCart() {
     this.cartItems = this.cartService.clearCart();
+    this.calcTotal();
   }
 
   onSubmit(post: any) {

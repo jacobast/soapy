@@ -12,7 +12,8 @@ export class CartService {
     saved: false,
     scent: "Wet Dog",
     shape: 'Dog',
-    size: 'Average'
+    size: 'Average',
+    price: 10,
 }];
 
   addToCart(soap: Soap) {
