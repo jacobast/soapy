@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Your order has been placed!</h1>
+<div mat-dialog-content>
+  You have ordered the following soaps:
+  
+  <ul>
+    <li *ngFor="let soap of data">{{ soap.name }}</li>
+  
+</ul>
+    <div mat-dialog-actions>
+        <button align="end" mat-button mat-dialog-close>Close</button>
+    </div>
+</div>

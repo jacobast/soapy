@@ -1,57 +1,44 @@
 <div class="center">
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
 <h1>Choose your soaps attributes:</h1>
 <br>
-<mat-form-field appearance="fill">
-    <mat-label>*ngFor</mat-label>
-    <mat-select>
-        <mat-option value="one">1</mat-option>
-    </mat-select>
+<mat-form-field appearance="fill" class="form-element">
+    <mat-label>Name your soap:</mat-label>
+    <input matInput formControlName="name">
 </mat-form-field>
 <br>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" class="form-element">
 <mat-label>Shape</mat-label>
-<mat-select>
-    <mat-option value="one">1</mat-option>
+<mat-select formControlName="shape">
+    <ng-container *ngFor="let options of formoptions | async">
+        <mat-option *ngFor="let shape of options.shape" [value]="shape">
+            {{shape}}
+        </mat-option>
+    </ng-container>
 </mat-select>
 </mat-form-field>
 <br>
-<!-- <mat-form-field appearance="fill">
-    <mat-label>Scent</mat-label>
-    <mat-select>
-        <mat-option value="one">1</mat-option>
-    </mat-select>
-</mat-form-field> -->
-<p>Scent:</p>
-<mat-chip-listbox selectable multiple aria-label="Scent selection">
-    <mat-chip-option color="accent">Rose</mat-chip-option>
-    <mat-chip-option color="accent">Orange</mat-chip-option>
-    <mat-chip-option color="accent">Sweaty man</mat-chip-option>
-    <mat-chip-option color="accent">Tobacco</mat-chip-option>
+
+<p>Select scent(s):</p>
+<mat-chip-listbox selectable multiple aria-label="Scent selection" class="form-element" formControlName="scent">
+    <ng-container *ngFor="let options of formoptions | async">
+        <mat-chip-option color="accent" *ngFor="let scent of options.scent" [value]="scent">
+            {{scent}}
+        </mat-chip-option>
+    </ng-container>
 </mat-chip-listbox>
 <br>
-<!-- <mat-form-field appearance="fill">
-    <mat-label>Size</mat-label>
-    <mat-select>
-        <mat-option value="one">1</mat-option>
-    </mat-select>
-</mat-form-field> -->
-<p>Size:</p>
-<section class="example-section">
-    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
-  </section>
+
+<p>Select a size:</p>
+<mat-radio-group aria-label="Select a size:" class="form-element" formControlName="size">
+    <ng-container *ngFor="let options of formoptions | async">
+        <mat-radio-button color="accent" *ngFor="let size of options.size" [value]="size">
+            {{size}}
+        </mat-radio-button>
+    </ng-container>
+  </mat-radio-group>
 <br>
-<mat-form-field appearance="fill">
-    <mat-label>Topping</mat-label>
-    <mat-select>
-        <mat-option value="one">1</mat-option>
-    </mat-select>
-</mat-form-field>
 <br>
-<mat-form-field appearance="fill">
-    <mat-label>Specific Requests</mat-label>
-    <textarea matInput></textarea>
-</mat-form-field>
-<br>
-<button align="end" class="buy-btn" mat-flat-button color="primary">Save</button>
-<button align="end" class="buy-btn" mat-flat-button color="accent">Order</button>
+<button (click)="openSnackBar('Added to cart', 'Close')" [disabled]="!formGroup.valid" type="submit" align="end" class="buy-btn" mat-flat-button color="accent">ADD TO CART</button>
+</form>
 </div>

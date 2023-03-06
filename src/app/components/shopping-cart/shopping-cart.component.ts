@@ -4,6 +4,9 @@ import { CartService } from '../../services/cart.service';
 import { Soap } from '../../Soap';
 
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+
+import { CartDialogComponent } from '../cart-dialog/cart-dialog.component';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -21,7 +24,7 @@ export class ShoppingCartComponent implements OnInit {
     address: ['', Validators.required],
   });
 
-  constructor(private cartService: CartService, private formBuilder: FormBuilder) {}
+  constructor(private cartService: CartService, private formBuilder: FormBuilder, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getItems();
@@ -47,6 +50,16 @@ export class ShoppingCartComponent implements OnInit {
 
   onSubmit(post: any) {
     this.post = post;
+    this.formGroup.reset();
+    this.clearCart();
+  }
+
+  openDialog() {
+    //this.dialog.open(CartDialogComponent);
+    console.log(this.cartItems);
+    const dialogRef: MatDialogRef<CartDialogComponent> = this.dialog.open(CartDialogComponent, {
+      data: this.cartItems
+    });
   }
 
 }
