@@ -1,4 +1,5 @@
 export interface Soap {
+    id: string;
     color: string;
     imgurl: string;
     name: string;

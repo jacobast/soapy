@@ -6,6 +6,7 @@ import { Soap } from '../Soap';
 })
 export class CartService {
   items: Soap[] = [{
+    id: "blabla",
     color: "yellow",
     imgurl: "",
     name: "Test soap",
