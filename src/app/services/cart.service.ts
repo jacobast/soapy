@@ -21,7 +21,18 @@ export class CartService {
   }
 
   removeFromCart(soap: Soap) {
-    this.items = this.items.filter(item => item !== soap);
+    // Find first soap with right name
+    const index = this.items.findIndex(soap => soap.name);
+
+    // Remove that soap
+    if(index !== -1) {
+      this.items.splice(index, 1);
+    }
+
+    /* This makes sure it only deletes one of the soaps when you 
+    press remove on a soap that there exists more than one of 
+    in the shopping cart */
+
     return this.items;
   }
 
