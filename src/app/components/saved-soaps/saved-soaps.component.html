@@ -1,17 +1,5 @@
-<!-- import { Soap } from '../../Soap'; -->
-
 <mat-grid-list cols="3" rowHeight="350px">
     <mat-grid-tile *ngFor="let soap of savedSoaps">
         <app-soap-item [soap]="soap" style="height: 100%;"></app-soap-item>
     </mat-grid-tile>
 </mat-grid-list>
-
-<!-- <div class="grid" *ngFor="let soap of soaps | async" [soap]="soap">
-    <app-soap-item *ngIf="soaps.liked"></app-soap-item>
-</div> -->
-
-<!-- <div *ngFor="let soap of soaps | async">
-    <div *ngIf="soap.saved; then saved else notSaved"></div>
-    <ng-template #saved>Hello, my name is {{soap.saved}} and I'm too old - {{soap.saved}}.</ng-template>
-    <ng-template #notSaved>Hello, my name is {{soap.saved}} and I'm too years young</ng-template>
-</div> -->

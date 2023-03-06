@@ -5,17 +5,7 @@ import { Soap } from '../Soap';
   providedIn: 'root'
 })
 export class CartService {
-  items: Soap[] = [{
-    id: "blabla",
-    color: "yellow",
-    imgurl: "",
-    name: "Test soap",
-    saved: false,
-    scent: "Wet Dog",
-    shape: 'Dog',
-    size: 'Average',
-    price: 10,
-  }];
+  items: Soap[] = [];
 
   addToCart(soap: Soap) {
     this.items.push(soap);

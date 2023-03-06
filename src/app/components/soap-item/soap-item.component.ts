@@ -22,20 +22,8 @@ export class SoapItemComponent implements OnInit {
   }
 
   onLike(soap: Soap) {
-    console.log(soap);
-    console.log(soap.saved);
-    console.log(`soaps/${soap.id}/saved`);
-    // this.firestore.doc(`soaps/${soap.id}/saved`).update({
-    //   saved: true
-    // });
-    // this.firestore.collection('soaps').doc(soap.id).collection('saved').doc('documentId').update({
-    //   saved: true
-    // });
     this.firestore.collection('soaps').doc(soap.id).update({
-      saved: !soap.id
+      saved: !soap.saved
     });
-    console.log(soap.saved);
-    // this.soap.saved = !this.soap.saved;
   }
-
 }

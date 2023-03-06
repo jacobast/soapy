@@ -12,14 +12,6 @@ import { SoapContainerComponent } from '../soap-container/soap-container.compone
 })
 export class SavedSoapsComponent {
 
-  // soaps: Soap[] = [];
-  // soaps: Observable<any[]>;
-
-  // constructor(private soapConatainer: SoapContainerComponent) {
-  //   this.soaps = soapConatainer.soaps;
-
-  // }
-
   savedSoaps: Soap[] = [];
 
   constructor(private firestore: AngularFirestore) { }
@@ -27,6 +19,7 @@ export class SavedSoapsComponent {
   ngOnInit(): void {
     this.getSoaps().subscribe((soaps: Soap[]) => {
       this.savedSoaps = soaps.filter((soap: Soap) => soap.saved === true);
+      console.log(this.savedSoaps);
     });
   }
 
@@ -34,32 +27,10 @@ export class SavedSoapsComponent {
     return this.firestore.collection('soaps').valueChanges().pipe(
       map((soaps: any[]) => {
         return soaps.map((soap: any) => {
-          const { color, imgurl, name, saved, scent, shape, size, price } = soap;
-          return { color, imgurl, name, saved, scent, shape, size, price } as Soap; // Cast the object as Soap
+          const { color, id, imgurl, name, saved, scent, shape, size, price } = soap;
+          return { color, id, imgurl, name, saved, scent, shape, size, price } as Soap; // Cast the object as Soap
         });
       })
     );
   }
-
-  // savedSoaps: Soap[] = [];
-
-  // constructor(private soapContainer: SoapContainerComponent) { }
-
-  // ngOnInit(): void {
-  //   this.getSoaps().subscribe((soaps: Soap[]) => {
-  //     this.savedSoaps = soaps.filter((soap: Soap) => soap.saved === true);
-  //   });
-  // }
-
-  // getSoaps(): Observable<Soap[]> {
-  //   return this.soapContainer.soaps.
-  //     map((soaps: any[]) => {
-  //       return soaps.map((soap: any) => {
-  //         const { color, imgurl, name, saved, scent, shape, size, price } = soap;
-  //         return { color, imgurl, name, saved, scent, shape, size, price } as Soap; // Cast the object as Soap
-  //       });
-  //     })
-  // }
-
-
 }
