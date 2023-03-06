@@ -22,7 +22,7 @@ export class CartService {
 
   removeFromCart(soap: Soap) {
     // Find first soap with right name
-    const index = this.items.findIndex(soap => soap.name);
+    const index = this.items.findIndex(item => item.name == soap.name);
 
     // Remove that soap
     if(index !== -1) {
