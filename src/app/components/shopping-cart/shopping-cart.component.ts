@@ -21,7 +21,7 @@ export class ShoppingCartComponent implements OnInit {
     address: ['', Validators.required],
   });
 
-  constructor(private cartService: CartService, private formBuilder: FormBuilder) {}
+  constructor(private cartService: CartService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.cartItems = this.cartService.getItems();
@@ -30,7 +30,7 @@ export class ShoppingCartComponent implements OnInit {
 
   calcTotal() {
     this.totalPrice = 0;
-    for(let item of this.cartItems) {
+    for (let item of this.cartItems) {
       this.totalPrice += item.price;
     }
   }

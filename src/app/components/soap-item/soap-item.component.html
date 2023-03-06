@@ -1,21 +1,18 @@
 <mat-card>
     <mat-card-content>
-        <img mat-card-image src="{{soap.imgurl}}"/>
+        <img mat-card-image src="{{soap.imgurl}}" />
         <mat-card-title>
             {{soap.name}}
 
             <!--Like button-->
-            <mat-button-toggle 
-            mat-icon-button class="like-button"
-            (click)="onLike()" 
-            >
+            <mat-button-toggle mat-icon-button class="like-button" (click)="onLike()">
                 <mat-icon>favorite</mat-icon>
             </mat-button-toggle>
         </mat-card-title>
 
         <!--Scents-->
-        <p> 
-           <b>Scent:</b> 
+        <p>
+            <b>Scent:</b>
             <span *ngFor="let scent of soap.scent; let last = last">
                 {{scent}}{{last ? '' : ', '}}
             </span>
@@ -24,13 +21,8 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button 
-            class="buy-btn" 
-            mat-flat-button 
-            color="accent"
-            (click)="addToCart(soap)"
-            >
-                Buy
+        <button class="buy-btn" mat-flat-button color="accent" (click)="addToCart(soap)">
+            Buy
         </button>
     </mat-card-actions>
 </mat-card>

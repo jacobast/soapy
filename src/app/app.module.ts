@@ -30,6 +30,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 
@@ -63,15 +64,16 @@ import { AppRoutingModule } from './app-routing.module';
     MatCheckboxModule,
     MatChipsModule,
     MatStepperModule,
+    MatBadgeModule,
     //,
     AppRoutingModule,
   ],
   declarations: [
-    AppComponent, 
-    SoapItemComponent, 
-    SoapContainerComponent, 
-    SavedSoapsComponent, 
-    ShoppingCartComponent, 
+    AppComponent,
+    SoapItemComponent,
+    SoapContainerComponent,
+    SavedSoapsComponent,
+    ShoppingCartComponent,
     CustomSoapComponent
   ],
   bootstrap: [AppComponent]

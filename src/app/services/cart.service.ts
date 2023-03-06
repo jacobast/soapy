@@ -14,7 +14,7 @@ export class CartService {
     shape: 'Dog',
     size: 'Average',
     price: 10,
-}];
+  }];
 
   addToCart(soap: Soap) {
     this.items.push(soap);
@@ -25,7 +25,7 @@ export class CartService {
     const index = this.items.findIndex(soap => soap.name);
 
     // Remove that soap
-    if(index !== -1) {
+    if (index !== -1) {
       this.items.splice(index, 1);
     }
 
@@ -43,5 +43,9 @@ export class CartService {
   clearCart() {
     this.items = [];
     return this.items;
+  }
+
+  getCartNbr() {
+    return this.items.length;
   }
 }
