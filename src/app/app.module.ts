@@ -30,6 +30,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -67,6 +68,7 @@ import { CartDialogComponent } from './components/cart-dialog/cart-dialog.compon
     MatCheckboxModule,
     MatChipsModule,
     MatStepperModule,
+    MatBadgeModule,
     MatRadioModule,
     MatSnackBarModule,
     MatDialogModule,
@@ -74,12 +76,13 @@ import { CartDialogComponent } from './components/cart-dialog/cart-dialog.compon
     AppRoutingModule,
   ],
   declarations: [
-    AppComponent, 
-    SoapItemComponent, 
-    SoapContainerComponent, 
-    SavedSoapsComponent, 
-    ShoppingCartComponent, 
-    CustomSoapComponent, CartDialogComponent, 
+    AppComponent,
+    SoapItemComponent,
+    SoapContainerComponent,
+    SavedSoapsComponent,
+    ShoppingCartComponent,
+    CustomSoapComponent,
+    CartDialogComponent, 
   ],
   bootstrap: [AppComponent]
 })

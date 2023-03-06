@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-
-// Firebase
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +9,11 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title: string = 'Soapy';
 
-  soaps: Observable<any[]>;
-  formoptions: Observable<any[]>;
-  constructor(firestore: AngularFirestore) {
-    this.soaps = firestore.collection('soaps').valueChanges();
-    this.formoptions = firestore.collection('formoptions').valueChanges();
+  constructor(private cartService: CartService) {
+  }
+
+  getCartNbr() {
+    return this.cartService.getCartNbr();
   }
 
   showFiller = false;

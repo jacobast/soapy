@@ -30,6 +30,7 @@ export class CustomSoapComponent implements OnInit {
 
   onSubmit(post: any) {
     const soap: Soap = {
+      id: "1",
       color: post.color, 
       imgurl: "", 
       name: post.name, 

@@ -33,7 +33,7 @@ export class ShoppingCartComponent implements OnInit {
 
   calcTotal() {
     this.totalPrice = 0;
-    for(let item of this.cartItems) {
+    for (let item of this.cartItems) {
       this.totalPrice += item.price;
     }
   }
