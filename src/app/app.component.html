@@ -4,20 +4,20 @@
     <span class="txtNav">Soapy</span>
   </a>
 
-  <span class=" example-spacer"></span>
+  <span class="example-spacer"></span>
+
   <a routerLink="/CustomSoap" routerLinkActive="active-link">
     <span class="txtNav"> Create your own soap</span>
   </a>
 
-  <span class="example-spacer"></span>
+  <button routerLink="/SavedSoaps" mat-icon-button class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>whatshot</mat-icon>
+  </button>
 
   <button routerLink="/ShoppingCart" mat-icon-button class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon">
     <mat-icon matBadge="{{getCartNbr()}}" matBadgeColor="accent">shopping_cart</mat-icon>
-  </button>
-  <button routerLink="/SavedSoaps" mat-icon-button class="example-icon"
-    aria-label="Example icon-button with share icon">
-    <mat-icon>whatshot</mat-icon>
   </button>
 </mat-toolbar>
 
